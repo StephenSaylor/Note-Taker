@@ -23,13 +23,9 @@ app.get('/api/notes', (req, res) => {
 
 app.post('/api/notes', (req, res) => {
 	const newNote = req.body
-
 	let data = JSON.parse(fs.readFile('./db/db.json', 'utf8'))
-
 	data.push(newNote)
-
 	fs.writeFile('./db/db.json', JSON.stringify(data))
-
 	res.json(data)
 })
 
