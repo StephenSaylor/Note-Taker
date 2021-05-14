@@ -1,11 +1,9 @@
-const { response } = require('express')
 const express = require('express')
 const fs = require('fs')
 const path = require('path')
-const { report } = require('process')
 
 const app = express()
-const PORT = process.env.PORT || 6000
+const PORT = process.env.PORT || 3000
 
 const notes = []
 
