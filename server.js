@@ -29,12 +29,12 @@ app.post('/api/notes', (req, res) => {
 })
 
 function getData() {
-	const text = fs.readFileSync('.db/db.son')
+	const text = fs.readFileSync('./db/db.json')
 	return JSON.parse(text)
 }
 
 function saveData(data) {
-	fs.writeFileSync('.db/db.json', JSON.stringify(data))
+	fs.writeFileSync('./db/db.json', JSON.stringify(data))
 }
 
 app.listen(PORT, () => console.log(`App listening on PORT ${PORT}`));
